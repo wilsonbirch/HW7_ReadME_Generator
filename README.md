@@ -1,5 +1,5 @@
 # HW7_ReadME_Generator
-A command line application that creates a readme.md file from a series of user inputs using node.js, and inquirer.
+A command line application that creates a readme.md file from a series of user inputs using node.js, and inquirer. The code is hosted here on github, there is no link to the application on github pages due to the nature of the application. The inquirer package needed for installing can be found here: https://www.npmjs.com/package/inquirer. The original readme from the required homework is shown below.
 
 When creating an open source project on GitHub, it is important to have a quality README with information about the app--what is the app for, how to use the app, how to install it, how to report issues, and how to make contributions so that other developers are more likely to use and contribute to the success of the project. A command-line application will allow for quick and easy generation of a project README to get started quickly. This will allow a project creator to spend more time working on finishing the project and less time creating a good README.
 
