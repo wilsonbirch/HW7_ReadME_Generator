@@ -36,6 +36,11 @@ const questions = [{
     name: `github`,
     message: `Enter your Github username`
 
+}, {
+    type: `string`,
+    name: `email`,
+    message: `Enter your email`
+
 }
 
 ];
@@ -43,21 +48,28 @@ const questions = [{
 // function to write README file
 function writeToFile(fileName, data) {
 
+    fs.writeFile(fileName + `.md`, `# `+ fileName +`\n`+ data.description + `\n## Table of Contents\n - [Installation](##Installation)\n- [Contributions](##Contributing)\n- [Testing](##Testing)\n- [License](##License)\n- [Questions](##Questions)\n## Installation \n`+ data.installation + `\n## Contributing \n`+ data.contribution + `\n## Testing \n`+ data.tests + `\n## License \n`+ data.license + `\n## Questions \n Github: github.com/`+ data.github + `\nEmail: ` + data.email, function (err){
+        if (err) throw err;
+    });
+    //console.log(fileName);
+
     
 }
 
 // function to initialize program
 function init() {
+
     inquirer
         .prompt(questions)
         
         .then (a => {
-
-            console.log(a);
+            let fileName = a.title;
+            writeToFile(fileName, a);
         });
-
 };
 
 
 // function call to initialize program
+
 init();
+
